@@ -14,3 +14,45 @@ Spring Boot 其实就是 Spring，学过 Spring 的同学一定都知道，即�
 
 ## 搭建一个Spring boot 应用
 [Spring Boot Reference Guide](https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#using-boot-dependency-management)
+
+## Spring Boot 配置文件简介
+###application.properties配置文件
+* src/main/resources 目录下有一个 application.properties 配置文件(如果没有就手动创建一个)。这就是SpringBoot默认配置文件
+格式：  
+  * 键=值
+  * properties 文件中注释使用#开头    
+```
+#端口
+server.port=8080
+```
+注意：这里只能访问 application.properties 中的属性，如果是其他自定义的配置文件中的属性是访问不到的，还需要其他的处理。
+```
+//加载classpath目录下的guc.properties文件
+@PropertySource(value = "classpath:guc.properties")
+```
+### Java配置
+```
+@Configuration
+public class ServletConfig implements WebServerFactoryCustomizer<ConfigurableWebServerFactory> {
+    @Override
+    public void customize(ConfigurableWebServerFactory factory) {
+        //设置端口为8083
+        factory.setPort(8083);
+    }
+}
+```
+### xml 配置（不推荐使用）
+```
+程序入口配置
+//通过@ImportResource加载xml配置文件
+@ImportResource(value = "classpath:config.xml")
+
+config.xml 内容
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="servletConfig" class="com.guc.springboot.config.ServletConfig"/>
+</beans>
+```
