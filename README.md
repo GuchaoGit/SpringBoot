@@ -56,3 +56,34 @@ config.xml 内容
     <bean id="servletConfig" class="com.guc.springboot.config.ServletConfig"/>
 </beans>
 ```
+
+## Spring Boot Web支持
+###Spring Boot MVC基本配置
+* Servlet容器相关的属性配置
+* Spring mvc 相关配置
+  *  比如spring.mvc.view.prefix 和 spring.mvc.view.suffix,这两个属性用于配置视图文件的前缀和后缀  
+* SpringBoot 的静态资源默认目录为/static、/public、/resources、和/META-INF/resources，默认映射路径都是/。SpringBoot 默认会按照META/resources > resources > static > public 的优先级寻找对应的资源文件并返回第一个找到的文件。
+### Spring Boot 静态资源(static 目录下)
+* http://localhost:8080/view/hello.html  <=> http://localhost:8080/welcome
+* 配置自己的静态资源路径 （既可通过映射访问，也可通过静态资源路径访问资源）
+  * 通过实现WebMvcConfigurer接口的addResourceHandlers方法来自定义静态资源。 打开SpringbootApplication.java，添加以下内容：
+```
+  
+   //设置配置类
+	@Configuration
+	static class WebConfig implements WebMvcConfigurer {
+
+		//重写addResourceHandlers方法
+		@Override
+		public void addResourceHandlers(ResourceHandlerRegistry registry) {
+			//设置静态资源映射路径为/**，资源位置为类路径下的upload  添加两个静态路径
+			registry.addResourceHandler("/**").addResourceLocations("classpath:/upload/").addResourceLocations("classpath:/static/");
+		}
+	}
+```
+  * 使用 application.properties 配置
+ ```
+ #多个配置之间使用,分割  注意这个属性会使默认的配置失效
+ spring.resources.static-locations=classpath:/upload/,classpath:/static
+ ```
+  
