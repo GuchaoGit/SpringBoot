@@ -86,4 +86,13 @@ config.xml 内容
  #多个配置之间使用,分割  注意这个属性会使默认的配置失效
  spring.resources.static-locations=classpath:/upload/,classpath:/static
  ```
-  
+  ## Spring Boot 事务控制
+数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。一个逻辑工作单元要成为事务，必须满足所谓的 ACID（原子性、一致性、隔离性和持久性）属性。  
+* 脏读：一个事务读取到了另一个事务没有提交的事务
+* 不可重复读：一个事务中对同一行记录读取两次得到不同的结果
+* 幻影读：一个事务两个相同的查询获得的结果不相同  
+不可重复读和幻影读的区别主要在于不可重复读是由于更新和删除操作造成的，而幻影读是由于插入操作造成的。  
+
+[Spring 事务](https://github.com/GuchaoGit/firstSpring.git) 一种是编程式事务，一种是声明式事务，但是都需要配置事务管理器  
+SpringBoot 的事务管理十分简单，只需要一个@Transactional 注解就可以了，当然必须是使用主流 ORM（Object Relational Mapping 对象-关系映射）框架。
+
