@@ -96,3 +96,14 @@ config.xml 内容
 [Spring 事务](https://github.com/GuchaoGit/firstSpring.git) 一种是编程式事务，一种是声明式事务，但是都需要配置事务管理器  
 SpringBoot 的事务管理十分简单，只需要一个@Transactional 注解就可以了，当然必须是使用主流 ORM（Object Relational Mapping 对象-关系映射）框架。
 
+## Spring Boot 中 aop 运用
+AOP 为 Aspect Oriented Programming 的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。  
+常用的aop注解：  
+* @Before 在方法前执行
+* @After 在方法执行后执行
+* @AfterReturning 在结果返回后执行
+* @AfterThrowing 在抛出异常后执行
+* @Around 环绕通知，相当于同时使用@Before 和@After  
+aop进行事务控制
+
+
