@@ -30,7 +30,7 @@ public class WebsiteService {
      * 查询所有
      * @return 网址列表
      */
-    @Transactional(rollbackFor = Exception.class) //添加事务 异常回滚
+    @Transactional(rollbackFor = Exception.class) //添加事务 异常回滚  通过AOP也可实现
     public List<Website> queryAll(){
         Website website;
         List<Website> websites = new ArrayList<>();

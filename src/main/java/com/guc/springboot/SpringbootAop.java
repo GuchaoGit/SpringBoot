@@ -75,7 +75,7 @@ public class SpringbootAop {
      * 设置事务拦截器
      */
     @Bean
-    public TransactionInterceptor transactionInterceptor() {
+    public TransactionInterceptor transactionInterceptorAop() {
         //设置事务属性 可以通过它设置事务的基本属性，如事务是读写事务或者只读事务，事务的超时时间等
         DefaultTransactionAttribute defaultTransactionAttribute = new DefaultTransactionAttribute();
         //设置为读写事务
@@ -95,7 +95,7 @@ public class SpringbootAop {
         //execution 表达式 匹配queryAll方法
         aspectJExpressionPointcut.setExpression("execution(* com.shiyanlou.springboot.service..*.queryAll(..))");
         //返回aop切面，切面=切点+通知
-        return new DefaultPointcutAdvisor(aspectJExpressionPointcut, transactionInterceptor());
+        return new DefaultPointcutAdvisor(aspectJExpressionPointcut, transactionInterceptorAop());
     }
     //endregion
 }

@@ -15,4 +15,8 @@ public class HelloController {
     public String welcome(){
         return "hello";
     }
+    @RequestMapping("/")
+    public String index(){
+        return "index";
+    }
 }
