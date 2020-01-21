@@ -86,7 +86,7 @@ config.xml 内容
  #多个配置之间使用,分割  注意这个属性会使默认的配置失效
  spring.resources.static-locations=classpath:/upload/,classpath:/static
  ```
-  ## Spring Boot 事务控制
+  ## Spring Boot 事务控制(采用 Spring-Date-JPA 来实现)
 数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。一个逻辑工作单元要成为事务，必须满足所谓的 ACID（原子性、一致性、隔离性和持久性）属性。  
 * 脏读：一个事务读取到了另一个事务没有提交的事务
 * 不可重复读：一个事务中对同一行记录读取两次得到不同的结果
@@ -121,4 +121,7 @@ Spring Data JPA之Query注解与Modifying注解
     @Query("update Account a set a.money = a.money + ?2 where a.username =?1")
     int in(String inner, int money);
 ```
+
+## Spring Boot 整合Mybatis开发
+[MyBatis](https://github.com/GuchaoGit/MyBatis.git)框架基础
 
