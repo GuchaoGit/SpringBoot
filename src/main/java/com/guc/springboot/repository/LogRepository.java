@@ -13,6 +13,7 @@ import java.util.List;
  * @Description 作为 dao 层
  */
 public interface LogRepository extends CrudRepository<Log,Integer> {
+    //命名空间形式
     @Query("select t from Log t where t.site_id = :site_id")
     List<Log> queryLogBySiteId(@Param("site_id")int sid); //自定义方法
 }

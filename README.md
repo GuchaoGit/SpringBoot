@@ -106,4 +106,19 @@ AOP 为 Aspect Oriented Programming 的缩写，意为：面向切面编程，�
 * @Around 环绕通知，相当于同时使用@Before 和@After  
 aop进行事务控制
 
+## Spring Boot 多数据源的配置
+开发项目的时候只使用了单个数据库，而多数据源可以帮助使用多个数据库或者不同类型的数据库。  
+Spring Data JPA之Query注解与Modifying注解
+* 命名空间形式
+```
+    @Query("select t from Log t where t.site_id = :site_id")
+    List<Log> queryLogBySiteId(@Param("site_id")int sid); //自定义方法
+```
+* 占位符形式
+```
+    //要想使用UPDATE或DELETE语句则需要在@Query注解上@Modifying注解，以通知该JPQL为更新或删除操作。
+    @Modifying(clearAutomatically = true)
+    @Query("update Account a set a.money = a.money + ?2 where a.username =?1")
+    int in(String inner, int money);
+```
 
