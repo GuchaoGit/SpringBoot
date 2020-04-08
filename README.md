@@ -123,5 +123,6 @@ Spring Data JPA之Query注解与Modifying注解
 ```
 
 ## Spring Boot 整合Mybatis开发
-[MyBatis](https://github.com/GuchaoGit/MyBatis.git)框架基础
+[MyBatis](https://github.com/GuchaoGit/MyBatis.git)框架基础  
+[Spring Boot集成MyBatis](https://github.com/GuchaoGit/SpringBootMyBatis.git)
 
