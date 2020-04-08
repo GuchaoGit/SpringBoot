@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bd1d3773-02c9-4fd5-a88e-5e78b8b19403" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,7 +16,7 @@
     <session id="1785524038">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
@@ -69,7 +68,7 @@
           <entry key="java" value="2817" />
           <entry key="md" value="989" />
           <entry key="properties" value="303" />
-          <entry key="txt" value="121" />
+          <entry key="txt" value="139" />
           <entry key="xml" value="59" />
         </counts>
       </usages-collector>
@@ -79,7 +78,7 @@
           <entry key="HTML" value="155" />
           <entry key="JAVA" value="2817" />
           <entry key="Markdown" value="989" />
-          <entry key="PLAIN_TEXT" value="124" />
+          <entry key="PLAIN_TEXT" value="142" />
           <entry key="Properties" value="303" />
           <entry key="XML" value="59" />
         </counts>
@@ -492,7 +491,7 @@
       <workItem from="1585812091072" duration="87000" />
       <workItem from="1586324836863" duration="1971000" />
       <workItem from="1586327267326" duration="3073000" />
-      <workItem from="1586333067932" duration="385000" />
+      <workItem from="1586333067932" duration="686000" />
     </task>
     <task id="LOCAL-00001" summary="Spring boot 框架">
       <created>1579146585267</created>
@@ -571,11 +570,18 @@
       <option name="project" value="LOCAL" />
       <updated>1579585840361</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MyBatis 集成到SpringBoot">
+      <created>1586333472514</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1586333472514</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91280000" />
+    <option name="totallyTimeSpent" value="91581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
@@ -659,7 +665,8 @@
     <MESSAGE value="html + css 使用示例" />
     <MESSAGE value="Spring Boot 多数据源配置" />
     <MESSAGE value="MyBatis 入门" />
-    <option name="LAST_COMMIT_MESSAGE" value="MyBatis 入门" />
+    <MESSAGE value="MyBatis 集成到SpringBoot" />
+    <option name="LAST_COMMIT_MESSAGE" value="MyBatis 集成到SpringBoot" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://E:/ProgramFiles/Java/jdk1.8.0_162/src.zip!/java/util/Optional.java">
